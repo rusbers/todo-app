@@ -17,4 +17,4 @@ This is a simple to-do list app that helps you keep track of your tasks.
 5. Change the theme by clicking on the settings icon and selecting a new theme.
 6. Filter your tasks by clicking on one of the filter options at the bottom of the screen.
 
-Stay organized and never forget a task again with this handy to-do list app!
+### [**Online demo**](https://rusbers.github.io/todo-app/)
