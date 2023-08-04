@@ -1,0 +1,58 @@
+@import "/src/styles/variables.scss";
+
+.content-wrapper-top,
+.content-wrapper-bottom::before {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: var(--header-average-bg-color);
+  background-image: var(--header-bg-image-S);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: $breakpoint-M) {
+    background-image: var(--header-bg-image-L);
+  }
+}
+
+.content-wrapper-top {
+  z-index: 1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 85%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 85%);
+
+  @media (min-width: $breakpoint-L) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 82%, 0 82%);
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 0 82%);
+  }
+}
+
+.content-wrapper-bottom {
+  margin-top: -30px;
+  padding-top: var(--header-min-height-S);
+  @media (min-width: $breakpoint-L) {
+    padding-top: var(--header-min-height-L);
+    margin-top: -55px;
+  }
+
+  &::before {
+    content: "";
+    min-height: var(--header-min-height-S);
+
+    @media (min-width: $breakpoint-L) {
+      min-height: var(--header-min-height-L);
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: var(--controllers-min-height-S);
+  
+    @media (min-width: $breakpoint-L) {
+      padding-bottom: var(--controllers-min-height-L);
+    }
+  }
+}

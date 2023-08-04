@@ -1,0 +1,72 @@
+@import './variables.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.a11y-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.page {
+  font-family: var(--font-family);
+  font-size: var(--font-size-S);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
+  color: var(--default-text-color);
+
+  @media screen and (min-width: $breakpoint-L) {
+    font-size: var(--font-size-L);
+  }
+}

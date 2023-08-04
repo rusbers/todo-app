@@ -1,0 +1,26 @@
+@import '/src/styles/variables.scss';
+
+.box {
+  --box-min-height-S: 50px;
+  --box-min-height-L: 65px;
+  padding: 18px 20px;
+  min-height: var(--box-min-height-S);
+  width: 100%;
+
+  @media (min-width: $breakpoint-L) {
+    min-height: var(--box-min-height-L);
+    padding: 20px 24px;
+  }
+
+  &--border-rad {
+    border-radius: 5px;
+  }
+
+  &--pl {
+    padding-left: 52px;
+
+    @media (min-width: $breakpoint-L) {
+      padding-left: 72px;
+    }
+  }
+}

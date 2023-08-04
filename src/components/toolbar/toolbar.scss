@@ -1,0 +1,44 @@
+@import "/src/styles/variables.scss";
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 16px;
+  background-color: var(--main-bg);
+  min-height: var(--controllers-min-height-S);
+  color: var(--primary-text-color);
+
+  @media (min-width: $breakpoint-L) {
+    min-height: var(--controllers-min-height-L);
+    font-size: var(--font-size-M);
+  }
+}
+
+.toolbar {
+  & .btn {
+    cursor: pointer;
+    color: inherit;
+  }
+
+  & .btn:hover {
+    color: var(--hover-action-text);
+  }
+}
+
+.toolbar__inner {
+  background-color: var(--content-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: none;
+  position: relative;
+}
+
+.toolbar__counter {
+  flex-shrink: 0;
+}

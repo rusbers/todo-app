@@ -1,0 +1,62 @@
+:root {
+  --font-family: "Josefin Sans", "Arial", sans-serif;
+  --font-size-S: 12px;
+  --font-size-M: 14px;
+  --font-size-L: 18px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --line-height: 1;
+  --active-filter: hsl(220, 98%, 61%);
+  --gradient: linear-gradient(135deg, hsl(192, 100%, 67%) 0, hsl(280, 87%, 65%) 100%);
+  --default-text-color: hsl(0, 0%, 0%);
+  --primary-light: hsl(0, 0%, 100%);
+  --primary-dark: hsl(235, 24%, 19%);
+  --header-min-height-S: 200px;
+  --header-min-height-L: 300px;
+  --controllers-min-height-S: 170px;
+  --controllers-min-height-L: 130px;
+}
+
+[data-theme="light"] {
+  --theme-switcher-icon: url(/src/assets/icons/icon-moon.svg);
+  --header-average-bg-color: hsl(246, 68%, 66%);
+  --header-bg-image-S: url(/src/assets/background/bg-mobile-light.jpg);
+  --header-bg-image-L: url(/src/assets/background/bg-desktop-light.jpg);
+  --main-bg: hsl(0, 0%, 98%);
+  --content-bg: hsl(0, 0%, 100%);
+  --border: hsl(236, 33%, 92%);
+  --box-shadow: 0px 35px 50px -15px hsla(235, 19%, 80%, 0.5);
+
+  --checkbox-border: hsl(236, 33%, 92%);
+  --checkbox-bg: linear-gradient(var(--primary-light), var(--primary-light)) padding-box,
+    var(--checkbox-border) border-box;
+  --checkbox-hover: linear-gradient(var(--primary-light), var(--primary-light)) padding-box, var(--gradient) border-box;
+
+  --hover-action-text: hsl(235, 19%, 35%);
+  --line-through-color: hsl(233, 11%, 84%);
+  --primary-text-color: hsl(235, 9%, 61%);
+  --text-color: hsl(235, 19%, 35%);
+  --input-text: hsl(235, 14%, 26%);
+}
+
+[data-theme="dark"] {
+  --theme-switcher-icon: url(/src/assets/icons/icon-sun.svg);
+  --header-average-bg-color: hsl(269, 62%, 36%);
+  --header-bg-image-S: url(/src/assets/background/bg-mobile-dark.jpg);
+  --header-bg-image-L: url(/src/assets/background/bg-desktop-dark.jpg);
+  --main-bg: hsl(235, 21%, 11%);
+  --content-bg: hsl(235, 24%, 19%);
+  --border: hsl(237, 14%, 26%);
+  --box-shadow: 0px 35px 50px -22px hsla(0, 0%, 0%, 0.5);
+
+  --checkbox-border: hsl(237, 14%, 26%);
+  --checkbox-bg: linear-gradient(var(--primary-dark), var(--primary-dark)) padding-box,
+    var(--checkbox-border) border-box;
+  --checkbox-hover: linear-gradient(var(--primary-dark), var(--primary-dark)) padding-box, var(--gradient) border-box;
+
+  --hover-action-text: hsl(236, 33%, 92%);
+  --line-through-color: hsl(233, 14%, 35%);
+  --primary-text-color: hsl(234, 11%, 52%);
+  --text-color: hsl(235, 39%, 85%);
+  --input-text: hsl(235, 39%, 85%);
+}

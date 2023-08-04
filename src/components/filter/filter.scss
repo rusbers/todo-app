@@ -1,0 +1,41 @@
+@import "/src/styles/variables.scss";
+
+.filter {
+  position: absolute;
+  bottom: -66px;
+  right: 0;
+  left: 0;
+  font-size: var(--font-size-M);
+  box-shadow: var(--box-shadow);
+
+  background-color: var(--content-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $breakpoint-L) {
+    position: static;
+    box-shadow: none;
+
+    min-height: auto;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+.filter__list {
+  display: flex;
+}
+
+.filter__list-item {
+  padding: 0 10px;
+  font-weight: 700;
+}
+
+.filter__btn::first-letter {
+  text-transform:capitalize;
+}
+
+.filter__btn--active {
+  color: var(--active-filter) !important;
+}

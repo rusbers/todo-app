@@ -1,0 +1,73 @@
+@import '/src//styles/variables.scss';
+
+.todo-form {
+  position: fixed;
+  z-index: 3;
+  top: 105px;
+  left: 0;
+  right: 0;
+
+  &:focus-within {
+    outline: 1px solid var(--text-color);
+    border-radius: 5px;
+  }
+
+  @media (min-width: $breakpoint-L) {
+    top: 160px;
+  }
+}
+
+.todo-form .box {
+  background-color: var(--content-bg);
+  display: flex;
+}
+
+.todo-form button[type=submit] {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (min-width: $breakpoint-L) {
+    left: 24px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.todo-form label {
+  position: relative;
+  width: 100%;
+}
+
+.todo-form input {
+  border: none;
+  background-color: var(--content-bg);
+  color: var(--input-text);
+  font-size: var(--font-size-S);
+  box-shadow: var(--box-shadow);
+  flex-grow: 1;
+
+  @media (min-width: $breakpoint-L) {
+    font-size: var(--font-size-L);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: var(--font-size-S);
+    color: var(--primary-text-color);
+
+    @media (min-width: $breakpoint-L) {
+      font-size: var(--font-size-L);
+    }
+  }
+}
+

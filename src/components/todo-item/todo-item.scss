@@ -1,0 +1,126 @@
+@import "/src/styles/variables.scss";
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.todo-item label {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  cursor: pointer;
+  flex-grow: 1;
+  margin-right: 1em;
+}
+
+.todo-item input[type="checkbox"] {
+  &:checked {
+    & + .todo-item__checkbox::after {
+      display: block;
+    }
+
+    & + .todo-item__checkbox + .todo-item__text {
+      color: var(--line-through-color);
+      text-decoration: line-through;
+    }
+  }
+  &:checked + .todo-item__checkbox::before {
+    display: none;
+  }
+}
+
+.todo-item__actions {
+  flex-shrink: 0;
+}
+
+.todo-item__btn {
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+
+  &--delete {
+    background-image: url(/src/assets/icons/icon-cross.svg);
+  }
+
+  &--edit {
+    background-image: url(/src/assets/icons/icon-edit.svg);
+    margin-right: 1em;
+  }
+
+  &--save {
+    background-image: url(/src/assets/icons/icon-save.svg);
+    margin-right: 1em;
+  }
+
+  @media (min-width: $breakpoint-L) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.todo-item__checkbox {
+  display: flex;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+
+    @media (min-width: $breakpoint-L) {
+      width: 24px;
+      height: 24px;
+      right: 24px;
+    }
+  }
+}
+
+.todo-item__checkbox::before {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  background: var(--checkbox-bg);
+  border: 1px solid transparent;
+}
+
+.todo-item__checkbox::after {
+  content: "";
+  display: none;
+  background-image: url(/src/assets/icons/checkbox-checked.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .todo-item__checkbox:hover::before {
+    background: var(--checkbox-hover);
+  }
+}
+
+.todo-item__text {
+  padding-right: 10px;
+  word-break: break-word;
+}
+
+.todo-item__edit-input {
+  background: var(--content-bg);
+  color: var(--input-text);
+  border: none;
+  outline: none;
+  padding: 0;
+  width: 100%;
+}

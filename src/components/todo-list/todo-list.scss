@@ -1,0 +1,7 @@
+@import "/src/styles/variables.scss";
+
+.todo-list {
+  position: relative;
+  background-color: var(--content-bg);
+  border-radius: 5px;
+}

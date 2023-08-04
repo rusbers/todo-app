@@ -1,0 +1,16 @@
+@import '/src/styles/variables.scss';
+
+.theme-switcher {
+  width: 20px;
+  height: 20px;
+  background-image: var(--theme-switcher-icon);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+
+  @media (min-width: $breakpoint-L) {
+    width: 26px;
+    height: 26px;
+  }
+}

@@ -1,0 +1,16 @@
+@import '/src/styles/variables.scss';
+
+.header {
+  padding-top: 50px;
+  min-height: var(--header-min-height-S);
+
+  @media (min-width: $breakpoint-L) {
+    padding-top: 70px;
+    min-height: var(--header-min-height-L);
+  }
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+}
